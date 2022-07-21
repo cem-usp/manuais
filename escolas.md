@@ -16,6 +16,7 @@ A plataforma Escolas da RMSP é um sistema WEB que apresenta informações sobre
 
 O projeto foi desenvolvido em parceria com a instituição CASA da University College London (UK)
 
+**Acesso**: [https://geolocation.centrodametropole.fflch.usp.br](https://geolocation.centrodametropole.fflch.usp.br)
 
 ## Como Usar?
 
@@ -28,18 +29,18 @@ O Escolas é um portal interativo para um gigantesco banco de dados geolocalizad
 ![alt_text](/manuais/assets/images/Escolas/3.png "image_tooltip")
 
 * A base de dados da Plataforma tem 12.534 escolas. Por diferentes motivos, não foi possível determinar a latitude e longitude para todas elas. Contudo, a grande maioria das escolas estão geolocalizadas no banco de dados (11.931), tendo apenas 603 escolas não geolocalizadas.
-* Existem duas formas de localizar no mapa uma escola em específico.
-    * **Digitando o nome da escola no quadro de busca.** Para encontrar uma escola é necessário escrever uma parte ou o nome completo da escola no campo de busca localizado na parte superior da página
+* Existem duas formas de localizar no mapa uma escola:
+    * **Digitando o nome da escola no quadro de busca:** Para encontrar uma escola é necessário escrever uma parte ou o nome completo da escola no campo de busca localizado na parte superior da página
         * **A partir da terceira** letra inserida, o sistema procederá a filtrar as escolas cujo nome possuam essas letras
-        * Caso não exista alguma escola com o nome que tenha essas letras, será mostrado a mensagem “Nenhum resultado encontrado”.
-        * Outras duas características da filtração das escolas que permitem que a busca seja mais eficiente são
-            * **Case insensitive**
+        * Caso não exista nenhuma escola com o nome que tenha essas letras, será mostrado a mensagem “Nenhum resultado encontrado”.
+        * Outras duas características da filtragem das escolas que permitem que a busca seja mais eficiente são
+            * **Case insensitive** (ignora se o termo está em caixa baixa ou alta)
             * **Remoção de acentos diacríticos**
         * Como mencionado anteriormente, nem todas as escolas estão geolocalizadas. Para diferenciar os dois tipos de escolas, a Plataforma lista as escolas acompanhada de um ícone, o qual pode ser vermelho ou preto
             * **Escolas com ícone vermelho** são aquelas que não possuem latitude e longitude.
             * **Escolas com ícone preto** são aquelas que possuem latitude e longitude.
-        * Nessa lista, ao escolher uma escola (com ícone preto) serão apresentados dois painéis (esquerdo e direito) com as informações educacionais e socioeconômicas e será desenhado o polígono da vizinhança/área de ponderação da escola. [Escolher uma escola com ícone preto]
-        * Se for escolhido uma escola com ícone vermelho serão mostrados os painéis mas **não o polígono da vizinhança da escola**.
+        * Nessa lista, ao escolher uma escola (com ícone preto) serão apresentados dois painéis (esquerdo e direito) com as informações educacionais e socioeconômicas e será desenhado o polígono da vizinhança/área de ponderação da escola.
+        * Se for escolhido uma escola com ícone vermelho serão mostrados os painéis, mas **não o polígono da vizinhança da escola**.
     * **Clicando sobre o ícone no mapa**. Ao colocar o mouse sobre esse ícone será mostrado um ​ popup, o qual contém informação básica da escola tais como nome, bairro, distrito e endereço.
         * As escolas são apresentadas usando **clusters​/grupos** de diferentes tipos (cor laranja, amarela e laranja) de acordo ao número de escolas encontradas numa certa área em um nível de zoom específico
         * Cada cluster/grupo é representado por um ícone de cor verde, amarela ou laranja. Cada cluster/grupo tem uma área de cobertura diferente de acordo com o número de escolas.
@@ -228,15 +229,15 @@ Os 41 gráficos educacionais implementados no painel esquerdo estão organizados
    </tr>
 </table>
 
-O segundo tipo de informação que o sistema mostra no ​painel esquerdo​​ são **gráficos** organizados por nível de ensino: **Infantil**, **Fundamental** e **Médio**. Ao todo, são 41 gráficos educacionais implementados. (apêndice contém a lista e definições)
+O segundo tipo de informação que o sistema mostra no ​painel esquerdo​​ são **gráficos** organizados por nível de ensino: **Infantil**, **Fundamental** e **Médio**. Ao todo, são 41 gráficos educacionais implementados.
 
 
 ## Desenho da área da vizinhança de uma escola
 
 ![alt_text](/manuais/assets/images/Escolas/6.png "image_tooltip")
 
-* Como falado anteriormente, **após escolher uma escola** por quaisquer das duas formas (caixa de busca ou pelo mapa), a escola geolocalizada será centralizada no mapa e será desenhado no meio do mapa a área de vizinhança/Área de Ponderação com um polígono de cor vermelho (a vizinhança da escola)
-* A **área da vizinhança** de uma escola em específico pode ser visualizada em forma de um polígono de cor vermelha. Este polígono corresponde à **área de ponderação **onde está localizada a escola
+* Como mencionado anteriormente, após escolher uma escola por quaisquer das duas formas (caixa de busca ou pelo mapa), a escola geolocalizada será centralizada no mapa e será desenhado no meio do mapa a **Área de vizinhança/Área de Ponderação** com um polígono de cor vermelho (a vizinhança da escola)
+* A **área da vizinhança** de uma escola em específico pode ser visualizada em forma de um polígono de cor vermelha. Este polígono corresponde à **área de ponderação** onde está localizada a escola
     * Para entender o que é a área de ponderação vamos recorrer à definição do IBGE-Instituto Brasileiro de Geografia e Estatística.
         * O IBGE define área de ponderação como sendo uma unidade geográfica, formada por um agrupamento mutuamente exclusivo de setores censitários contíguos, para a aplicação dos procedimentos de calibração dos pesos de forma a produzir estimativas compatíveis com algumas das informações conhecidas para a população como um todo. O tamanho dessas áreas, em termos de número de domicílios e de população, não pode ser muito reduzido, sob pena de perda de precisão de suas estimativas. Assim este tamanho mínimo foi definido em 400 domicílios ocupados na amostra, exceto para os municípios que não atingem este total onde, neste caso, o próprio município é considerado uma área de ponderação.
 * A Plataforma utiliza o polígono da área de ponderação para realizar diferentes estatísticas com os dados do​ Censo demográfico de 2010 e apresentá-las no sistema através de gráficos, os quais podem ser vistos no painel direito que apresentaremos a seguir.
@@ -245,7 +246,7 @@ O segundo tipo de informação que o sistema mostra no ​painel esquerdo​​ 
 
 O painel da direita mostra mostra diferentes gráficos agrupados em quatro categorias:
 
-* Características socioeconômicas
+* **Características socioeconômicas**
 
     Nesta categoria foram implementados uma tabela e um gráfico estatístico:
 
@@ -255,13 +256,14 @@ O painel da direita mostra mostra diferentes gráficos agrupados em quatro categ
     * **Distribuição de Renda**
         * Tabela que apresenta ​a taxa de pobreza, Renda Domiciliar per capita e o índice de Gini.​ O gráfico foi construído com dados da Região Metropolitana de São Paulo, dados do Estado de São Paulo, e dados do Brasil. Esses dados são produtos dos dados do Censo Demográfico de 2010.
     * **Estrutura do Emprego**
-* Características educacionais
+
+* **Características educacionais**
     * **Alfabetização**
 
     ![alt_text](/manuais/assets/images/Escolas/8.png "image_tooltip")
 
 
-* Perfil educacional da população em idade escolar
+* **Perfil educacional da população em idade escolar**
     * **Alfabetização**
 
     ![alt_text](/manuais/assets/images/Escolas/9.png "image_tooltip")
@@ -295,10 +297,9 @@ O painel da direita mostra mostra diferentes gráficos agrupados em quatro categ
     ![alt_text](/manuais/assets/images/Escolas/14.png "image_tooltip")
 
 
-    * Esta funcionalidade permitirá ao usuário escolher
-        * o mapa base (Open Street Maps,
-        * Google Maps ou Mapbox) ou
-        * permitir ou não a visualização do polígono da Área de Ponderação
+    * Esta funcionalidade permite o usuário
+        * Escolher o **mapa base** (Open Street Maps, Google Maps ou Mapbox)
+        * Visualização do polígono da Área de Ponderação
     * Após a seleção das opções desejadas aperte no botão azul e as mudanças serão aplicadas.
 * Janela de ajuda
 
